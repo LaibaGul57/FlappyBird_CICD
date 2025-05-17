@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+#game-container {
+  position: relative;
+  width: fit-content;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background-image: url('bg.jpg'); /* Set your background image here */
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
+#instructions {
+  text-align: center;
+  margin-top: 20px;
+}
+body.levels-page {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  font-family: Arial, sans-serif;
+}
+
+.levels-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 40px;
+}
+
+.level-box {
+  width: 200px;
+  height: 120px;
+  border-radius: 15px;
+  border: 3px solid #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.level-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00 inset;
+}
+
+.level-heading {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  margin: 0;
+  text-shadow: 2px 2px 5px black;
+}
+.levels-page {
+  background-image: url('your-background.jpg'); /* Replace with actual image filename */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
