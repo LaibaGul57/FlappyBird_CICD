@@ -1,8 +1,9 @@
-# Use an Nginx base image
-FROM nginx:alpine
+FROM jenkins/jenkins:lts
 
-# Copy your game files to the Nginx HTML directory
-COPY . /usr/share/nginx/html
+USER root
 
-# Expose port 80
-EXPOSE 80
+RUN apt-get update && \
+    apt-get install -y docker.io && \
+    usermod -aG docker jenkins
+
+USER jenkins
