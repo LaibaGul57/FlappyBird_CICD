@@ -1,9 +1,14 @@
-FROM jenkins/jenkins:lts
+# Use nginx base image to serve your static site
+FROM nginx:alpine
 
-USER root
+# Clean default nginx HTML
+RUN rm -rf /usr/share/nginx/html/*
 
-RUN apt-get update && \
-    apt-get install -y docker.io && \
-    usermod -aG docker jenkins
+# Copy game files to nginx public directory
+COPY . /usr/share/nginx/html
 
-USER jenkins
+# Expose port 80
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
