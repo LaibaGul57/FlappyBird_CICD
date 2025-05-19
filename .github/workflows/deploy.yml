@@ -3,7 +3,7 @@ name: Deploy Flappy Bird Game
 on:
   push:
     branches:
-      - main  # Push to main branch triggers this
+      - main  # Push to main branch triggers this .yes it do
 
 jobs:
   build-and-deploy:
